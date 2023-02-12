@@ -7,12 +7,12 @@ Console.WriteLine("Введите количество строк: ");
 int n = int.Parse(Console.ReadLine() ?? "");
 
 string[] a = new string[n];
-Console.WriteLine("Введите строку: ");
+Console.WriteLine("Введите строки: ");
 for (int i = 0; i < n; i++)
 {
     a[i] = Console.ReadLine() ?? "";
 }
-Console.WriteLine ("---------------------------------");
+Console.WriteLine("---------------------------------");
 for (int i = 0; i < a.Length; i++)
 {
     {
@@ -21,4 +21,35 @@ for (int i = 0; i < a.Length; i++)
     Console.WriteLine();
 }
 // Этап 1. Формирование массива из строк и вывод консоль
+Console.WriteLine ("=========================================");
 
+// Счетчик на количество символов в строке
+
+int count = 0;
+for (int i = 0; i < n; i++)
+{
+    if (a[i].Length <= 3)
+    {
+        count++;
+    }
+}
+
+// формирования массива из строк меньше 3-х символов
+
+string[] itog = new string[count];
+int j = 0;
+for (int i = 0; i < n; i++)
+{
+    if (a[i].Length <= 3)
+    {
+        itog[j] = a[i];
+        j++;
+    }
+}
+// вывод путем перебора
+
+Console.WriteLine("Строки содержащие в себе 3 и менее символов: ");
+foreach (string s in itog)
+{
+    Console.WriteLine(s);
+}
