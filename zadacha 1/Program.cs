@@ -49,7 +49,21 @@ for (int i = 0; i < n; i++)
 // вывод путем перебора
 
 Console.WriteLine("Строки содержащие в себе 3 и менее символов: ");
+
+Console.Write ("[");
+for (int i = 0; i < a.Length; i++)
+{   
+    {
+        Console.Write($"{a[i]} ");
+    }
+    
+}
+Console.Write ("] ->");
+Console.Write ("[");
 foreach (string s in itog)
 {
-    Console.WriteLine(s);
+{
+    Console.Write($"{s} ");
 }
+}
+Console.Write ("]");

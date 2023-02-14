@@ -16,3 +16,5 @@
 
 - *Этап 4. 
 Выводим массив при помощи перебора (цикл foreach)*.
+
+![diagram] (https://github.com/nntspector/FinalWork/diagram.png)
